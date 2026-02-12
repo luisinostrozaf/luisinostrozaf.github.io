@@ -1,11 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum</title>
+    <title>Galería de Proyectos · Acordeón</title>
+    <!-- Tailwind v4 CDN (opción rápida) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Transición suave para el acordeón */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, padding 0.2s ease;
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Suficiente para el contenido */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
 </head>
-<body>
-    <h1>LOREM IPSUM</h1>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 font-sans antialiased">
+
+    <main class="max-w-3xl mx-auto px-4 py-12 md:py-20">
+        
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-700 to-purple-700 bg-clip-text text-transparent tracking-tight">
+                Mis Proyectos
+            </h1>
+            <p class="text-slate-600 mt-3 text-lg">Seleccioná un proyecto para ver los detalles</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-6 rounded-full"></div>
+        </header>
+
+        <!-- Lista de proyectos (acordeón) -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/30 divide-y divide-slate-200 overflow-hidden">
+            
+            <!-- PROYECTO 1 -->
+            <div class="accordion-item">
+                <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 font-bold group-hover:bg-indigo-200 transition">
+                            01
+                        </span>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold text-slate-800 group-hover:text-indigo-700 transition">
+                                Portfolio Personal
+                            </h2>
+                            <p class="text-sm text-slate-500 mt-0.5">React · Tailwind · Framer Motion</p>
+                        </div>
+                    </div>
+                    <!-- Ícono flecha animado -->
+                    <svg class="accordion-icon w-6 h-6 text-slate-400 group-hover:text-indigo-600 transition transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content px-5 md:px-6 bg-slate-50/30 border-t border-slate-100">
+                    <div class="space-y-3 text-slate-700">
+                        <p class="flex items-start gap-2">
+                            <span class="text-indigo-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">Diseño:</strong> UI minimalista con modo oscuro automático.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="text-indigo-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">Característica:</strong> Animaciones suaves en scroll y hover.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="text-indigo-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">En vivo:</strong> <a href="#" class="text-indigo-600 underline decoration-indigo-300 hover:decoration-2">tudominio.github.io</a></span>
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Tailwind v4</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full font-medium">Responsive</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">Accesible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROYECTO 2 -->
+            <div class="accordion-item">
+                <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-purple-100 text-purple-700 font-bold group-hover:bg-purple-200 transition">
+                            02
+                        </span>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold text-slate-800 group-hover:text-purple-700 transition">
+                                Dashboard Clima
+                            </h2>
+                            <p class="text-sm text-slate-500 mt-0.5">JavaScript · API OpenWeather · Chart.js</p>
+                        </div>
+                    </div>
+                    <svg class="accordion-icon w-6 h-6 text-slate-400 group-hover:text-purple-600 transition transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content px-5 md:px-6 bg-slate-50/30 border-t border-slate-100">
+                    <div class="space-y-3 text-slate-700">
+                        <p class="flex items-start gap-2">
+                            <span class="text-purple-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">API:</strong> Clima en tiempo real + pronóstico 5 días.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="text-purple-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">Gráficos:</strong> Temperatura y humedad con Chart.js.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="text-purple-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">UX:</strong> Búsqueda por ciudad y geolocalización.</span>
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full font-medium">API</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium">Async/Await</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs rounded-full font-medium">LocalStorage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROYECTO 3 -->
+            <div class="accordion-item">
+                <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 font-bold group-hover:bg-emerald-200 transition">
+                            03
+                        </span>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold text-slate-800 group-hover:text-emerald-700 transition">
+                                E‑commerce Sneakers
+                            </h2>
+                            <p class="text-sm text-slate-500 mt-0.5">HTML · Tailwind · Alpine.js</p>
+                        </div>
+                    </div>
+                    <svg class="accordion-icon w-6 h-6 text-slate-400 group-hover:text-emerald-600 transition transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content px-5 md:px-6 bg-slate-50/30 border-t border-slate-100">
+                    <div class="space-y-3 text-slate-700">
+                        <p class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">Carrito:</strong> Persistencia con localStorage.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">Filtros:</strong> Por talla, marca y precio.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">Interactividad:</strong> Alpine.js para el state reactivo.</span>
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs rounded-full font-medium">Alpine.js</span>
+                            <span class="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full font-medium">Carrito</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-xs rounded-full font-medium">Mobile first</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROYECTO 4 - puedes seguir agregando -->
+            <div class="accordion-item">
+                <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-100 text-amber-700 font-bold group-hover:bg-amber-200 transition">
+                            04
+                        </span>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold text-slate-800 group-hover:text-amber-700 transition">
+                                Blog Personal
+                            </h2>
+                            <p class="text-sm text-slate-500 mt-0.5">Astro · Tailwind · MDX</p>
+                        </div>
+                    </div>
+                    <svg class="accordion-icon w-6 h-6 text-slate-400 group-hover:text-amber-600 transition transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content px-5 md:px-6 bg-slate-50/30 border-t border-slate-100">
+                    <div class="space-y-3 text-slate-700">
+                        <p class="flex items-start gap-2">
+                            <span class="text-amber-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">Framework:</strong> Astro para renderizado ultra rápido.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="text-amber-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">Contenido:</strong> Artículos en MDX con syntax highlighting.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="text-amber-600 font-bold text-lg leading-5">•</span>
+                            <span><strong class="font-semibold">SEO:</strong> Meta tags dinámicas y sitemap automático.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer sutil -->
+        <p class="text-center text-slate-400 text-sm mt-10">
+            ⚡ Hecho con Tailwind v4 · Acordeón vanilla JS
+        </p>
+    </main>
+
+    <!-- JAVASCRIPT: Acordeón accesible y limpio -->
+    <script>
+        (function() {
+            const items = document.querySelectorAll('.accordion-item');
+            
+            function closeAll(exceptThis = null) {
+                items.forEach(item => {
+                    if (item === exceptThis) return;
+                    const content = item.querySelector('.accordion-content');
+                    const icon = item.querySelector('.accordion-icon');
+                    if (content && content.classList.contains('open')) {
+                        content.classList.remove('open');
+                        if (icon) icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
+
+            items.forEach(item => {
+                const trigger = item.querySelector('.accordion-trigger');
+                const content = item.querySelector('.accordion-content');
+                const icon = item.querySelector('.accordion-icon');
+
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Si ya está abierto, lo cerramos
+                    if (content.classList.contains('open')) {
+                        content.classList.remove('open');
+                        if (icon) icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        // Cerramos todos los demás
+                        closeAll(item);
+                        // Abrimos este
+                        content.classList.add('open');
+                        if (icon) icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Flechas iniciales apuntan hacia abajo (cerrado)
+            document.querySelectorAll('.accordion-icon').forEach(icon => {
+                icon.style.transform = 'rotate(0deg)';
+            });
+        })();
+    </script>
+
 </body>
 </html>
