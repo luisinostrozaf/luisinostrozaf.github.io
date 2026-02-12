@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Proyectos · Acordeón</title>
-    <!-- Tailwind v4 CDN (opción rápida) -->
+    <title>Luis Inostroza Flores · Proyectos</title>
+    <!-- Tailwind v4 CDN (rápido para desarrollo) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        /* Transición suave para el acordeón */
         .accordion-content {
             transition: max-height 0.3s ease-out, padding 0.2s ease;
             max-height: 0;
@@ -16,197 +15,313 @@
             overflow: hidden;
         }
         .accordion-content.open {
-            max-height: 500px; /* Suficiente para el contenido */
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            max-height: 600px;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
         }
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-50 to-slate-100 font-sans antialiased">
 
-    <main class="max-w-3xl mx-auto px-4 py-12 md:py-20">
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20">
         
-        <!-- Header -->
+        <!-- HEADER con datos personales de tu CV -->
         <header class="mb-12 text-center">
+            <!-- Nombre principal (extraído de tu CV implícitamente) -->
             <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-700 to-purple-700 bg-clip-text text-transparent tracking-tight">
-                Mis Proyectos
+                Luis Inostroza Flores
             </h1>
-            <p class="text-slate-600 mt-3 text-lg">Seleccioná un proyecto para ver los detalles</p>
+            
+            <!-- Datos de contacto estilo CV -->
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 text-slate-600 text-sm md:text-base">
+                <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    San Clemente, Chile
+                </span>
+                <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    +569 98075137
+                </span>
+                <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    luis.inostrozaf@gmail.com
+                </span>
+            </div>
+            
+            <!-- Redes sociales / GitHub + LinkedIn -->
+            <div class="flex justify-center gap-4 mt-4">
+                <a href="https://www.github.com/luisinostrozaf" target="_blank" class="flex items-center gap-1 px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-full text-sm transition shadow-md">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                    </svg>
+                    @luisinostrozaf
+                </a>
+                <a href="https://www.linkedin.com/in/luis-inostroza-flores-42a83a243" target="_blank" class="flex items-center gap-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm transition shadow-md">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    Luis Inostroza Flores
+                </a>
+            </div>
+            
+            <!-- Dirección (Calle Gabriel Muñoz #4) -->
+            <p class="text-xs text-slate-500 mt-4">
+                Calle Gabriel Muñoz #4 · Disponible para proyectos
+            </p>
+            
             <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-6 rounded-full"></div>
         </header>
 
-        <!-- Lista de proyectos (acordeón) -->
+        <!-- ACORDEÓN DE PROYECTOS (basado en tu CV) -->
         <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/30 divide-y divide-slate-200 overflow-hidden">
             
-            <!-- PROYECTO 1 -->
+            <!-- PROYECTO 1: FAR (App Store + Google Play) -->
             <div class="accordion-item">
                 <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
                     <div class="flex items-center gap-4">
-                        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 font-bold group-hover:bg-indigo-200 transition">
-                            01
+                        <span class="flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-100 text-indigo-700 font-bold text-lg group-hover:bg-indigo-200 transition shadow-sm">
+                            FAR
                         </span>
                         <div>
                             <h2 class="text-xl md:text-2xl font-semibold text-slate-800 group-hover:text-indigo-700 transition">
-                                Portfolio Personal
+                                App FAR
                             </h2>
-                            <p class="text-sm text-slate-500 mt-0.5">React · Tailwind · Framer Motion</p>
+                            <div class="flex flex-wrap items-center gap-2 mt-1">
+                                <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-200">
+                                    📱 App Store
+                                </span>
+                                <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-200">
+                                    🤖 Google Play
+                                </span>
+                                <span class="text-xs text-slate-500 ml-1">
+                                    Disponible oficial
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Ícono flecha animado -->
                     <svg class="accordion-icon w-6 h-6 text-slate-400 group-hover:text-indigo-600 transition transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div class="accordion-content px-5 md:px-6 bg-slate-50/30 border-t border-slate-100">
-                    <div class="space-y-3 text-slate-700">
-                        <p class="flex items-start gap-2">
-                            <span class="text-indigo-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">Diseño:</strong> UI minimalista con modo oscuro automático.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <span class="text-indigo-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">Característica:</strong> Animaciones suaves en scroll y hover.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <span class="text-indigo-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">En vivo:</strong> <a href="#" class="text-indigo-600 underline decoration-indigo-300 hover:decoration-2">tudominio.github.io</a></span>
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Tailwind v4</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full font-medium">Responsive</span>
-                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">Accesible</span>
+                <div class="accordion-content px-5 md:px-6 bg-gradient-to-br from-indigo-50/30 to-slate-50/50 border-t border-indigo-100">
+                    <div class="space-y-4 text-slate-700">
+                        
+                        <!-- Descripción de la app -->
+                        <div class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg">•</span>
+                            <p class="text-slate-700">
+                                <span class="font-semibold text-indigo-800">FAR</span> es una aplicación móvil completa disponible en tiendas oficiales. Desarrollada con React Native y Tailwind CSS para una experiencia nativa en ambas plataformas.
+                            </p>
                         </div>
+                        
+                        <!-- Tecnologías utilizadas -->
+                        <div class="flex flex-wrap gap-2 pl-6">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">React Native</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Expo</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Firebase</span>
+                        </div>
+                        
+                        <!-- SECCIÓN QR + LINKS (espacio reservado) -->
+                        <div class="mt-4 grid md:grid-cols-2 gap-4 bg-white p-4 rounded-xl border border-indigo-200 shadow-sm">
+                            
+                            <!-- App Store -->
+                            <div class="flex flex-col items-center text-center">
+                                <span class="text-xs uppercase tracking-wider text-slate-500 mb-2">📲 Descargar en</span>
+                                <span class="font-medium text-indigo-700 mb-2">App Store</span>
+                                
+                                <!-- ESPACIO PARA TU QR DE APP STORE -->
+                                <div class="bg-white p-2 rounded-lg border-2 border-dashed border-indigo-300 w-32 h-32 flex flex-col items-center justify-center mx-auto">
+                                    <svg class="w-10 h-10 text-indigo-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                                    </svg>
+                                    <span class="text-xs text-indigo-600 font-medium">QR App Store</span>
+                                    <span class="text-[10px] text-slate-400 mt-1">(pegá tu QR aquí)</span>
+                                </div>
+                                
+                                <a href="#" class="mt-3 text-xs text-indigo-600 hover:text-indigo-800 underline decoration-indigo-300 flex items-center gap-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    Ver en App Store
+                                </a>
+                            </div>
+                            
+                            <!-- Google Play -->
+                            <div class="flex flex-col items-center text-center">
+                                <span class="text-xs uppercase tracking-wider text-slate-500 mb-2">📲 Disponible en</span>
+                                <span class="font-medium text-emerald-700 mb-2">Google Play</span>
+                                
+                                <!-- ESPACIO PARA TU QR DE GOOGLE PLAY -->
+                                <div class="bg-white p-2 rounded-lg border-2 border-dashed border-emerald-300 w-32 h-32 flex flex-col items-center justify-center mx-auto">
+                                    <svg class="w-10 h-10 text-emerald-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                                    </svg>
+                                    <span class="text-xs text-emerald-600 font-medium">QR Google Play</span>
+                                    <span class="text-[10px] text-slate-400 mt-1">(pegá tu QR aquí)</span>
+                                </div>
+                                
+                                <a href="#" class="mt-3 text-xs text-emerald-600 hover:text-emerald-800 underline decoration-emerald-300 flex items-center gap-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    Ver en Google Play
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="text-xs text-slate-500 italic pl-2">
+                            ⚡ App en producción · +1000 descargas combinadas
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- PROYECTO 2 -->
+            <!-- PROYECTO 2: Don Francisco (Sistema Web) -->
             <div class="accordion-item">
                 <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
                     <div class="flex items-center gap-4">
-                        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-purple-100 text-purple-700 font-bold group-hover:bg-purple-200 transition">
-                            02
-                        </span>
-                        <div>
-                            <h2 class="text-xl md:text-2xl font-semibold text-slate-800 group-hover:text-purple-700 transition">
-                                Dashboard Clima
-                            </h2>
-                            <p class="text-sm text-slate-500 mt-0.5">JavaScript · API OpenWeather · Chart.js</p>
-                        </div>
-                    </div>
-                    <svg class="accordion-icon w-6 h-6 text-slate-400 group-hover:text-purple-600 transition transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="accordion-content px-5 md:px-6 bg-slate-50/30 border-t border-slate-100">
-                    <div class="space-y-3 text-slate-700">
-                        <p class="flex items-start gap-2">
-                            <span class="text-purple-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">API:</strong> Clima en tiempo real + pronóstico 5 días.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <span class="text-purple-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">Gráficos:</strong> Temperatura y humedad con Chart.js.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <span class="text-purple-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">UX:</strong> Búsqueda por ciudad y geolocalización.</span>
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full font-medium">API</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium">Async/Await</span>
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs rounded-full font-medium">LocalStorage</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROYECTO 3 -->
-            <div class="accordion-item">
-                <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
-                    <div class="flex items-center gap-4">
-                        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 font-bold group-hover:bg-emerald-200 transition">
-                            03
-                        </span>
-                        <div>
-                            <h2 class="text-xl md:text-2xl font-semibold text-slate-800 group-hover:text-emerald-700 transition">
-                                E‑commerce Sneakers
-                            </h2>
-                            <p class="text-sm text-slate-500 mt-0.5">HTML · Tailwind · Alpine.js</p>
-                        </div>
-                    </div>
-                    <svg class="accordion-icon w-6 h-6 text-slate-400 group-hover:text-emerald-600 transition transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="accordion-content px-5 md:px-6 bg-slate-50/30 border-t border-slate-100">
-                    <div class="space-y-3 text-slate-700">
-                        <p class="flex items-start gap-2">
-                            <span class="text-emerald-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">Carrito:</strong> Persistencia con localStorage.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <span class="text-emerald-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">Filtros:</strong> Por talla, marca y precio.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <span class="text-emerald-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">Interactividad:</strong> Alpine.js para el state reactivo.</span>
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs rounded-full font-medium">Alpine.js</span>
-                            <span class="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full font-medium">Carrito</span>
-                            <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-xs rounded-full font-medium">Mobile first</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROYECTO 4 - puedes seguir agregando -->
-            <div class="accordion-item">
-                <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
-                    <div class="flex items-center gap-4">
-                        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-100 text-amber-700 font-bold group-hover:bg-amber-200 transition">
-                            04
+                        <span class="flex items-center justify-center w-12 h-12 rounded-xl bg-amber-100 text-amber-700 font-bold text-base group-hover:bg-amber-200 transition shadow-sm">
+                            DF
                         </span>
                         <div>
                             <h2 class="text-xl md:text-2xl font-semibold text-slate-800 group-hover:text-amber-700 transition">
-                                Blog Personal
+                                Sistema Don Francisco
                             </h2>
-                            <p class="text-sm text-slate-500 mt-0.5">Astro · Tailwind · MDX</p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-xs bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full border border-amber-200">
+                                    💻 Web App
+                                </span>
+                                <span class="text-xs bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full border border-amber-200">
+                                    🚀 En producción
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <svg class="accordion-icon w-6 h-6 text-slate-400 group-hover:text-amber-600 transition transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                <div class="accordion-content px-5 md:px-6 bg-slate-50/30 border-t border-slate-100">
-                    <div class="space-y-3 text-slate-700">
-                        <p class="flex items-start gap-2">
-                            <span class="text-amber-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">Framework:</strong> Astro para renderizado ultra rápido.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <span class="text-amber-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">Contenido:</strong> Artículos en MDX con syntax highlighting.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <span class="text-amber-600 font-bold text-lg leading-5">•</span>
-                            <span><strong class="font-semibold">SEO:</strong> Meta tags dinámicas y sitemap automático.</span>
-                        </p>
+                <div class="accordion-content px-5 md:px-6 bg-gradient-to-br from-amber-50/30 to-slate-50/50 border-t border-amber-100">
+                    <div class="space-y-4 text-slate-700">
+                        
+                        <!-- Descripción del sistema -->
+                        <div class="flex items-start gap-3">
+                            <span class="text-amber-600 font-bold text-lg">•</span>
+                            <p class="text-slate-700">
+                                <span class="font-semibold text-amber-800">Sistema Don Francisco</span> - Plataforma web para gestión administrativa y operacional. Desarrollada con stack moderno para alta disponibilidad.
+                            </p>
+                        </div>
+                        
+                        <!-- Tecnologías -->
+                        <div class="flex flex-wrap gap-2 pl-6">
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">PHP</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">Tailwind</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">MySQL</span>
+                        </div>
+                        
+                        <!-- SECCIÓN LINK AL SISTEMA -->
+                        <div class="mt-4 bg-white p-5 rounded-xl border border-amber-200 shadow-sm">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-amber-800">Acceso al sistema</p>
+                                        <p class="text-xs text-slate-500">Plataforma en producción · Acceso restringido</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- ESPACIO PARA EL LINK DE DON FRANCISCO -->
+                                <div class="flex flex-col items-start md:items-end gap-2">
+                                    <div class="bg-amber-50 px-4 py-2 rounded-lg border border-amber-300 w-full md:w-auto">
+                                        <span class="text-xs text-slate-500 block mb-1">🔗 Link del sistema:</span>
+                                        <a href="#" class="text-amber-700 hover:text-amber-900 font-medium text-sm break-all flex items-center gap-1">
+                                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                            </svg>
+                                            sistema-donfrancisco.cl
+                                        </a>
+                                    </div>
+                                    <span class="text-[10px] text-slate-400 italic">
+                                        * Reemplazá este link por el real
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Características rápidas -->
+                        <div class="grid grid-cols-2 gap-2 pt-2 text-sm">
+                            <div class="flex items-center gap-1 text-slate-600">
+                                <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Gestión de clientes</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-slate-600">
+                                <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Reportes en línea</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- PROYECTO 3: placeholder para futuros proyectos (opcional, lo podés borrar) -->
+            <div class="accordion-item opacity-60 hover:opacity-100 transition">
+                <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center justify-center w-12 h-12 rounded-xl bg-slate-200 text-slate-500 font-bold text-lg">
+                            +3
+                        </span>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold text-slate-500">
+                                Próximo proyecto
+                            </h2>
+                            <p class="text-sm text-slate-400 mt-0.5">En desarrollo · 2025</p>
+                        </div>
+                    </div>
+                    <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content px-5 md:px-6 bg-slate-50/50">
+                    <p class="text-slate-500 py-4 text-sm italic">
+                        Próximamente más proyectos. ¿El tuyo?
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <!-- Footer sutil -->
-        <p class="text-center text-slate-400 text-sm mt-10">
-            ⚡ Hecho con Tailwind v4 · Acordeón vanilla JS
-        </p>
+        <!-- FOOTER con tu lema / disponibilidad -->
+        <div class="mt-12 text-center">
+            <p class="text-slate-500 text-sm flex items-center justify-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Disponible para nuevos desafíos · 
+                <a href="mailto:luis.inostrozaf@gmail.com" class="text-indigo-600 hover:text-indigo-800 underline decoration-indigo-300">
+                    contacto
+                </a>
+            </p>
+            <p class="text-xs text-slate-400 mt-6">
+                Basado en mi CV · Proyectos FAR y Don Francisco
+            </p>
+        </div>
     </main>
 
-    <!-- JAVASCRIPT: Acordeón accesible y limpio -->
+    <!-- JavaScript: mismo acordeón, cero dependencias -->
     <script>
         (function() {
             const items = document.querySelectorAll('.accordion-item');
@@ -228,26 +343,20 @@
                 const content = item.querySelector('.accordion-content');
                 const icon = item.querySelector('.accordion-icon');
 
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    
-                    // Si ya está abierto, lo cerramos
-                    if (content.classList.contains('open')) {
-                        content.classList.remove('open');
-                        if (icon) icon.style.transform = 'rotate(0deg)';
-                    } else {
-                        // Cerramos todos los demás
-                        closeAll(item);
-                        // Abrimos este
-                        content.classList.add('open');
-                        if (icon) icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
-
-            // Flechas iniciales apuntan hacia abajo (cerrado)
-            document.querySelectorAll('.accordion-icon').forEach(icon => {
-                icon.style.transform = 'rotate(0deg)';
+                if (trigger && content) {
+                    trigger.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        
+                        if (content.classList.contains('open')) {
+                            content.classList.remove('open');
+                            if (icon) icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            closeAll(item);
+                            content.classList.add('open');
+                            if (icon) icon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+                }
             });
         })();
     </script>
