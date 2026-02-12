@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Inostroza Flores · Proyectos</title>
-    <!-- Tailwind v4 CDN (rápido para desarrollo) -->
+    <!-- Tailwind v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Librería para generar QR -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
     <style>
         .accordion-content {
             transition: max-height 0.3s ease-out, padding 0.2s ease;
@@ -15,7 +17,7 @@
             overflow: hidden;
         }
         .accordion-content.open {
-            max-height: 600px;
+            max-height: 800px;
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
         }
@@ -25,14 +27,12 @@
 
     <main class="max-w-4xl mx-auto px-4 py-12 md:py-20">
         
-        <!-- HEADER con datos personales de tu CV -->
+        <!-- HEADER con tus datos personales -->
         <header class="mb-12 text-center">
-            <!-- Nombre principal (extraído de tu CV implícitamente) -->
             <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-700 to-purple-700 bg-clip-text text-transparent tracking-tight">
                 Luis Inostroza Flores
             </h1>
             
-            <!-- Datos de contacto estilo CV -->
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 text-slate-600 text-sm md:text-base">
                 <span class="flex items-center gap-1">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,7 +55,6 @@
                 </span>
             </div>
             
-            <!-- Redes sociales / GitHub + LinkedIn -->
             <div class="flex justify-center gap-4 mt-4">
                 <a href="https://www.github.com/luisinostrozaf" target="_blank" class="flex items-center gap-1 px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-full text-sm transition shadow-md">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -71,18 +70,16 @@
                 </a>
             </div>
             
-            <!-- Dirección (Calle Gabriel Muñoz #4) -->
             <p class="text-xs text-slate-500 mt-4">
                 Calle Gabriel Muñoz #4 · Disponible para proyectos
             </p>
-            
             <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-6 rounded-full"></div>
         </header>
 
-        <!-- ACORDEÓN DE PROYECTOS (basado en tu CV) -->
+        <!-- ACORDEÓN DE PROYECTOS -->
         <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/30 divide-y divide-slate-200 overflow-hidden">
             
-            <!-- PROYECTO 1: FAR (App Store + Google Play) -->
+            <!-- ========== PROYECTO FAR (con links reales) ========== -->
             <div class="accordion-item">
                 <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
                     <div class="flex items-center gap-4">
@@ -91,7 +88,7 @@
                         </span>
                         <div>
                             <h2 class="text-xl md:text-2xl font-semibold text-slate-800 group-hover:text-indigo-700 transition">
-                                App FAR
+                                FAR · Firma Remota
                             </h2>
                             <div class="flex flex-wrap items-center gap-2 mt-1">
                                 <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-200">
@@ -99,9 +96,6 @@
                                 </span>
                                 <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-200">
                                     🤖 Google Play
-                                </span>
-                                <span class="text-xs text-slate-500 ml-1">
-                                    Disponible oficial
                                 </span>
                             </div>
                         </div>
@@ -113,78 +107,74 @@
                 <div class="accordion-content px-5 md:px-6 bg-gradient-to-br from-indigo-50/30 to-slate-50/50 border-t border-indigo-100">
                     <div class="space-y-4 text-slate-700">
                         
-                        <!-- Descripción de la app -->
+                        <!-- Descripción oficial desde Google Play -->
                         <div class="flex items-start gap-3">
                             <span class="text-indigo-600 font-bold text-lg">•</span>
                             <p class="text-slate-700">
-                                <span class="font-semibold text-indigo-800">FAR</span> es una aplicación móvil completa disponible en tiendas oficiales. Desarrollada con React Native y Tailwind CSS para una experiencia nativa en ambas plataformas.
+                                <span class="font-semibold text-indigo-800">FAR</span> permite autorizar y aprobar de forma segura la firma de documentos o transacciones. Autenticación biométrica, soporte para firma cualificada remota EU eIDAS y protección criptográfica.
                             </p>
                         </div>
                         
-                        <!-- Tecnologías utilizadas -->
+                        <!-- Tecnologías CORREGIDAS: Kotlin/Java + Objective-C -->
                         <div class="flex flex-wrap gap-2 pl-6">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">React Native</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Expo</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Tailwind CSS</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Firebase</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Android: Kotlin/Java</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">iOS: Objective-C</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">Firma remota</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full font-medium">eIDAS</span>
                         </div>
                         
-                        <!-- SECCIÓN QR + LINKS (espacio reservado) -->
+                        <!-- SECCIÓN QR + LINKS (con QR generados automáticamente) -->
                         <div class="mt-4 grid md:grid-cols-2 gap-4 bg-white p-4 rounded-xl border border-indigo-200 shadow-sm">
                             
-                            <!-- App Store -->
+                            <!-- App Store - LINK REAL -->
                             <div class="flex flex-col items-center text-center">
                                 <span class="text-xs uppercase tracking-wider text-slate-500 mb-2">📲 Descargar en</span>
                                 <span class="font-medium text-indigo-700 mb-2">App Store</span>
                                 
-                                <!-- ESPACIO PARA TU QR DE APP STORE -->
-                                <div class="bg-white p-2 rounded-lg border-2 border-dashed border-indigo-300 w-32 h-32 flex flex-col items-center justify-center mx-auto">
-                                    <svg class="w-10 h-10 text-indigo-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
-                                    </svg>
-                                    <span class="text-xs text-indigo-600 font-medium">QR App Store</span>
-                                    <span class="text-[10px] text-slate-400 mt-1">(pegá tu QR aquí)</span>
-                                </div>
+                                <!-- QR GENERADO para App Store -->
+                                <div id="qr-appstore" class="bg-white p-2 rounded-lg w-32 h-32 mx-auto"></div>
                                 
-                                <a href="#" class="mt-3 text-xs text-indigo-600 hover:text-indigo-800 underline decoration-indigo-300 flex items-center gap-1">
+                                <a href="https://apps.apple.com/cl/app/far-autoriza-firma-remota/id1561364392" target="_blank" class="mt-3 text-xs text-indigo-600 hover:text-indigo-800 underline decoration-indigo-300 flex items-center gap-1">
                                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
-                                    Ver en App Store
+                                    apps.apple.com/cl/app/far
                                 </a>
                             </div>
                             
-                            <!-- Google Play -->
+                            <!-- Google Play - LINK REAL -->
                             <div class="flex flex-col items-center text-center">
                                 <span class="text-xs uppercase tracking-wider text-slate-500 mb-2">📲 Disponible en</span>
                                 <span class="font-medium text-emerald-700 mb-2">Google Play</span>
                                 
-                                <!-- ESPACIO PARA TU QR DE GOOGLE PLAY -->
-                                <div class="bg-white p-2 rounded-lg border-2 border-dashed border-emerald-300 w-32 h-32 flex flex-col items-center justify-center mx-auto">
-                                    <svg class="w-10 h-10 text-emerald-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
-                                    </svg>
-                                    <span class="text-xs text-emerald-600 font-medium">QR Google Play</span>
-                                    <span class="text-[10px] text-slate-400 mt-1">(pegá tu QR aquí)</span>
-                                </div>
+                                <!-- QR GENERADO para Google Play -->
+                                <div id="qr-googleplay" class="bg-white p-2 rounded-lg w-32 h-32 mx-auto"></div>
                                 
-                                <a href="#" class="mt-3 text-xs text-emerald-600 hover:text-emerald-800 underline decoration-emerald-300 flex items-center gap-1">
+                                <a href="https://play.google.com/store/apps/details?id=com.certinet.certinetfarpro&hl=es_HN" target="_blank" class="mt-3 text-xs text-emerald-600 hover:text-emerald-800 underline decoration-emerald-300 flex items-center gap-1">
                                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
-                                    Ver en Google Play
+                                    play.google.com/store/apps/details
                                 </a>
                             </div>
                         </div>
                         
-                        <p class="text-xs text-slate-500 italic pl-2">
-                            ⚡ App en producción · +1000 descargas combinadas
-                        </p>
+                        <!-- Detalles adicionales de la app -->
+                        <div class="bg-indigo-50/50 p-3 rounded-lg text-xs text-slate-600 space-y-1">
+                            <p class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span>
+                                <strong>Desarrollador:</strong> Certinet S.A.
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span>
+                                <strong>Seguridad:</strong> No recopila datos · No comparte con terceros
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- PROYECTO 2: Don Francisco (Sistema Web) -->
+            <!-- ========== PROYECTO DON FRANCISCO (link con 404 detectado) ========== -->
             <div class="accordion-item">
                 <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
                     <div class="flex items-center gap-4">
@@ -200,7 +190,7 @@
                                     💻 Web App
                                 </span>
                                 <span class="text-xs bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full border border-amber-200">
-                                    🚀 En producción
+                                    ⚠️ Link temporal
                                 </span>
                             </div>
                         </div>
@@ -212,23 +202,21 @@
                 <div class="accordion-content px-5 md:px-6 bg-gradient-to-br from-amber-50/30 to-slate-50/50 border-t border-amber-100">
                     <div class="space-y-4 text-slate-700">
                         
-                        <!-- Descripción del sistema -->
                         <div class="flex items-start gap-3">
                             <span class="text-amber-600 font-bold text-lg">•</span>
                             <p class="text-slate-700">
-                                <span class="font-semibold text-amber-800">Sistema Don Francisco</span> - Plataforma web para gestión administrativa y operacional. Desarrollada con stack moderno para alta disponibilidad.
+                                <span class="font-semibold text-amber-800">Sistema Don Francisco</span> - Plataforma web para gestión administrativa e inventario.
                             </p>
                         </div>
                         
-                        <!-- Tecnologías -->
                         <div class="flex flex-wrap gap-2 pl-6">
                             <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">Laravel</span>
                             <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">PHP</span>
-                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">Tailwind</span>
                             <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium">Render</span>
                         </div>
                         
-                        <!-- SECCIÓN LINK AL SISTEMA -->
+                        <!-- SECCIÓN LINK - CON ADVERTENCIA DE 404 -->
                         <div class="mt-4 bg-white p-5 rounded-xl border border-amber-200 shadow-sm">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                                 <div class="flex items-center gap-3">
@@ -239,74 +227,39 @@
                                     </div>
                                     <div>
                                         <p class="font-medium text-amber-800">Acceso al sistema</p>
-                                        <p class="text-xs text-slate-500">Plataforma en producción · Acceso restringido</p>
+                                        <p class="text-xs text-slate-500">Hosteado en Render · Free tier</p>
                                     </div>
                                 </div>
                                 
-                                <!-- ESPACIO PARA EL LINK DE DON FRANCISCO -->
                                 <div class="flex flex-col items-start md:items-end gap-2">
                                     <div class="bg-amber-50 px-4 py-2 rounded-lg border border-amber-300 w-full md:w-auto">
-                                        <span class="text-xs text-slate-500 block mb-1">🔗 Link del sistema:</span>
-                                        <a href="#" class="text-amber-700 hover:text-amber-900 font-medium text-sm break-all flex items-center gap-1">
+                                        <span class="text-xs text-slate-500 block mb-1">🔗 Link actual (responde 404):</span>
+                                        <a href="https://inventariodf.onrender.com" target="_blank" class="text-amber-700 hover:text-amber-900 font-medium text-sm break-all flex items-center gap-1">
                                             <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                                             </svg>
-                                            sistema-donfrancisco.cl
+                                            inventariodf.onrender.com
                                         </a>
                                     </div>
+                                    <!-- ADVERTENCIA CLARA DEL 404 -->
+                                    <div class="flex items-center gap-2 bg-red-50 border border-red-200 p-2 rounded-lg w-full">
+                                        <span class="flex-shrink-0 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold">!</span>
+                                        <span class="text-xs text-red-700">
+                                            <strong>Link caído (error 404).</strong> El servidor en Render no está activo o la URL cambió.
+                                        </span>
+                                    </div>
                                     <span class="text-[10px] text-slate-400 italic">
-                                        * Reemplazá este link por el real
+                                        * Actualizá este link cuando el sistema esté online nuevamente
                                     </span>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Características rápidas -->
-                        <div class="grid grid-cols-2 gap-2 pt-2 text-sm">
-                            <div class="flex items-center gap-1 text-slate-600">
-                                <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span>Gestión de clientes</span>
-                            </div>
-                            <div class="flex items-center gap-1 text-slate-600">
-                                <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span>Reportes en línea</span>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- PROYECTO 3: placeholder para futuros proyectos (opcional, lo podés borrar) -->
-            <div class="accordion-item opacity-60 hover:opacity-100 transition">
-                <button class="accordion-trigger w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-slate-50/80 transition duration-200 group">
-                    <div class="flex items-center gap-4">
-                        <span class="flex items-center justify-center w-12 h-12 rounded-xl bg-slate-200 text-slate-500 font-bold text-lg">
-                            +3
-                        </span>
-                        <div>
-                            <h2 class="text-xl md:text-2xl font-semibold text-slate-500">
-                                Próximo proyecto
-                            </h2>
-                            <p class="text-sm text-slate-400 mt-0.5">En desarrollo · 2025</p>
-                        </div>
-                    </div>
-                    <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="accordion-content px-5 md:px-6 bg-slate-50/50">
-                    <p class="text-slate-500 py-4 text-sm italic">
-                        Próximamente más proyectos. ¿El tuyo?
-                    </p>
                 </div>
             </div>
         </div>
 
-        <!-- FOOTER con tu lema / disponibilidad -->
+        <!-- FOOTER -->
         <div class="mt-12 text-center">
             <p class="text-slate-500 text-sm flex items-center justify-center gap-2">
                 <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -316,13 +269,31 @@
                 </a>
             </p>
             <p class="text-xs text-slate-400 mt-6">
-                Basado en mi CV · Proyectos FAR y Don Francisco
+                FAR en App Store y Google Play · Sistema Don Francisco (pendiente reactivar)
             </p>
         </div>
     </main>
 
-    <!-- JavaScript: mismo acordeón, cero dependencias -->
+    <!-- JavaScript para QR y acordeón -->
     <script>
+        // Generar QR cuando la página cargue
+        document.addEventListener('DOMContentLoaded', function() {
+            // QR para App Store
+            new QRCode(document.getElementById("qr-appstore"), {
+                text: "https://apps.apple.com/cl/app/far-autoriza-firma-remota/id1561364392",
+                width: 128,
+                height: 128
+            });
+            
+            // QR para Google Play
+            new QRCode(document.getElementById("qr-googleplay"), {
+                text: "https://play.google.com/store/apps/details?id=com.certinet.certinetfarpro&hl=es_HN",
+                width: 128,
+                height: 128
+            });
+        });
+
+        // Acordeón (mismo código)
         (function() {
             const items = document.querySelectorAll('.accordion-item');
             
